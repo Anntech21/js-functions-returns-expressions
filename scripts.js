@@ -30,8 +30,12 @@ let user2 = {
 // Complete the function "greet" so that it returns the string "Welcome [NAME]! We are glad you are here." The function should be able to have user1 or user2 as an input.
 
 function greet(name) {
-  return "Welcome ${.name}! we are glad you are here.";
-}
+  let message = `Welcome ${name}! we are glad you are here.`;
+  return message;
+};
+
+greet(user1.name);
+greet(user2.name);
 
 // Call the function so that "Welcome Rose Smith! We are glad you are here." is returned from the function and stored in a variable.
 
@@ -56,7 +60,7 @@ function makeName() {
   return; // what should be returned?
 }
 function makeName(firstName, lastName) {
-  return "${firstName} ${lastName}";
+  return `${firstName} ${lastName}`;
 }
 
 // Call the function and store the value in a variable.
@@ -131,8 +135,12 @@ console.log(square(7)); // Expected output: 49
 
 // Convert the following function expression into a function declaration. Call the function twice with different arguments.
 
-const formatName = function (firstName, lastName) {
+
+
+let formatName = function (firstName, lastName) {
   return `${lastName}, ${firstName}`;
+  console.log(formatName)
 };
 
-console.log(formatName);
+formatName();
+
